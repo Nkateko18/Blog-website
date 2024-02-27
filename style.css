@@ -1,0 +1,992 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1280px;
+}
+
+:root {
+    --text-color: #016FA0;
+    --light-blue: #81D3F8;
+    --body: rgba(129,211,248, 0.10);
+    --white: #fff;
+}
+
+body {
+    background: var(--body);
+}
+
+.nav-container {
+    width: 100%;
+    background: var(--text-color);
+}
+
+header {
+    display: flex;
+    transition: 0.4s ease-in;
+    height: 520px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 300px;
+    margin: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    font-weight: 500;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav ul li a:hover {
+    transition: 0.2s ease-in;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+nav ul li button {
+    width: 90px;
+    height: 35px;
+    background: var(--light-blue);
+    margin: 10px;
+    border: 3px solid var(--light-blue);
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+nav ul li button:hover {
+    transition: 0.3s ease-in;
+    background: transparent;
+    color: var(--white);
+}
+
+nav ul li button a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav .hamburger {
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    display: none;
+    scale:0.8;
+} 
+
+nav .hamburger .bar,
+nav .hamburger::after,
+nav .hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+nav .hamburger.active::before {
+    transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+nav .hamburger.active::after {
+    transform: rotate(45deg) translate(-8px, -5px);
+}
+
+nav .hamburger.active .bar {
+    opacity: 0; 
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.welcome {
+    margin-left: 50px;
+}
+
+.welcome h1 {
+    font-size: 78px;
+    width: 600px;
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.welcome button {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    border: 3px solid var(--white);
+    background: transparent;
+    border-radius: 15px;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.welcome button:hover {
+    transition: 0.4s ease-in-out;
+    color: var(--text-color);
+    background: var(--white);
+}
+
+.welcome button a {
+    text-decoration: none;  
+}
+
+.content img {
+    width: 530px;
+    border-radius: 0 20px 20px 20px;
+    height: 370px;
+}
+
+.home-container {
+    padding: 30px 10%;
+    text-align: center;
+}
+
+.home-container h1 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.home-container h2 {
+    margin:20px;
+    color: var(--text-color);
+}
+
+.way {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.way .head {
+    text-align: right;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+
+.card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 20px;
+    height: 400px;
+    width: 269px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-wrapper a {
+    text-decoration: none;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+section .card .image {
+    width: 100%;
+}
+
+section .card .image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.art-tittle {
+    text-align: left;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+section .card .about p {
+    display: flex;
+    text-align: left;
+    font-size: 10px;
+    color: black;
+    font-weight: 200;
+}
+
+section .card .about h5 {
+    text-align: right;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
+/* SIGN IN AND SIGN UP PAGE STYLING*/
+.Join-us {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    padding-left: 260px;
+    display: none;
+}
+
+.Join-us h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.Join-us p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+.Join-us span {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.Join-us .container {
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 
+        0 14px 28px rgba(0, 0, 0, 0.2),
+        0 10px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.overlay-container {
+    display: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    right: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.form-container form {
+    height: 100%;
+    background: #fff;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #016FA0;
+}
+
+.social-container a i {
+    color: #016FA0;
+}
+
+.social-container a:hover i {
+    transition: 0.4s ease-in-out;
+    color: blue;
+    font-size: 22px;
+}
+
+.form-container input {
+    width: 100%;
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+}
+
+.form-container a {
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #016FA0;
+}
+
+.Join-us button {
+    background: var(--text-color);
+    color: #fff;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.Join-us button:active {
+    transform: scale(0.95);
+}
+
+.Join-us button:focus {
+    outline: none;
+}
+
+.Join-us button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+}
+
+.overlay-container {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    left: -100%;
+    background: linear-gradient(to 
+            right, #016FA0, #016fb1) no-repeat
+            0 0 / cover;
+    color: #fff;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateY(0);
+}
+
+.overlay-left {
+    transform: translateY(-20%);
+}
+
+.Join-us .container.right-panel-active {
+    & .sign-in-container {
+        transform: translateY(100%);
+    }
+
+    & .overlay-container {
+        transform: translateX(-100%);
+    }
+}
+
+.Join-us .container.container.right-panel-active {
+    & .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+    }
+
+    & .overlay {
+        transform: translateX(50%);
+    }
+
+    & .overlay-right {
+        transform: translateY(20%);
+    }
+}
+
+
+/*Newsletter Styling*/
+.newsletter {
+    display: block;
+}
+
+.newsletter .container {
+    margin: 30px 0;
+    display: flex;
+}
+
+.start {
+    justify-content: start;
+    text-align: left;
+    width: 70%;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.start .trial {
+    width: 275px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.start .trial input {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    border-radius: 40px;
+    border: 2px solid var(--text-color);
+}
+
+.start .trial button {
+    position: absolute;
+    border-radius: 40px;
+    padding: 7px;
+    margin-top: 4.2px;
+    color: white;
+    font-weight: bold;
+    background: var(--text-color);
+    border: 1px solid var(--text-color);
+    margin-left: 150px;
+}
+
+.end {
+    border-bottom: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+}
+
+.end h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.end p {
+    padding: 0 30px;
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.media i {
+    color: #016FA0;
+    margin: 0 10px;
+}
+
+.media i:hover {
+    color: black;
+}
+
+
+/*BLOG PAGE BEING STYLED*/
+.Blog {
+    padding: 0 130px;
+    text-align: center;
+    display: none;
+}
+
+.Blog .container h1 {
+    margin: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 40px;
+}
+
+.Blog .container p {
+    font-size: 12px;
+    padding: 0 230px;
+    padding-bottom: 20px;
+}
+
+
+.blog-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blog-flex article {
+    width: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: left;
+    background: white;
+}
+
+.blog-flex article img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.blog-flex article .date {
+    display: flex;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
+.date h4  {
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.blog-flex article .title {
+    padding-left:20px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+
+.blog-flex article p {
+    width: 100%;
+    padding-left: 20px;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 13px;
+    position: relative;
+}
+
+
+/* Remote Listing Page Being Styled*/
+.part {
+    margin: 0;
+    padding: 0 120px;
+}
+
+.part h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 0 300px;
+}
+
+.capabilities {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    justify-content: space-around;
+}
+
+.cap {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    padding-left: 10px;
+    row-gap: 5px;
+}
+
+.cap i {
+    font-size: 35px;
+    padding: 20px;
+    width: 72px;
+    border-radius: 10px;
+    background: rgba(1, 111, 160, 0.4);
+}
+
+.cap h2 {
+    font-size: 16px;
+}
+
+.cap p {
+    font-size: 14px;
+}
+
+.even {
+    background: linear-gradient(to bottom, rgba(1, 111, 160, 0.1), transparent);
+}
+
+.even h1{
+    padding-top: 30px;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    justify-content: space-around;
+    row-gap: 15px;
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 200px;
+    padding-left: 10px;
+    background: white;
+}
+
+.cat i  {
+    background:rgba(0, 0, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 15px;
+    border-radius: 50%;
+    margin: 25px 10px;
+    color: #016FA0;
+}
+
+.cat h2 {
+    padding-left: 11px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cat p {
+    font-size: 12px;
+    padding-left: 11px;
+    padding-top: 25px;
+}
+
+.cat:hover {
+    background: var(--text-color);
+    transition: 0.4s ease-in-out;
+}
+
+.cat:hover i{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cat:hover h2 {
+    color: white;
+}
+
+.cat:hover p{
+    color: white;
+}
+
+footer {
+    background: #fff;
+    margin-top: 20px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.pict img{
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.nav-link ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    margin: 20px;
+    padding: 0 350px;
+}
+
+.nav-link ul li {
+    width: 100%;
+}
+
+.nav-link ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link ul li:hover a {
+    color: #016FA0;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+footer .media {
+    margin-bottom: 10px;
+}
+
+footer .media i {
+    color: black;
+    font-size: 20px;
+}
+
+footer .media i:hover {
+    color: #016FA0;
+    transform: translateY(-5px);
+}
+
+footer h2 {
+    color: black;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.Join-us footer .container {
+    display: none;
+}
+
+
+@media screen and (max-width: 1280px) {
+    nav {
+        padding: 0 50px;
+        width: 100%;
+    }
+}
+
+
+@media  screen and (max-width: 992px) {
+    header {
+        background: var(--text-color);
+        top: 0;
+        z-index: 9;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        top: 90px;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: var(--text-color);
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 50px;
+        gap: 30px;
+        transition: .5s ease-in;
+    }
+
+    nav ul li button {
+        font-size: 28px;
+        width: 150px;
+        margin-left: 0;
+        border: none;
+        background: none;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 28px;
+    }
+
+    nav ul li:hover a {
+        color: #81D3F8;
+        text-decoration: none;
+    }
+
+    nav ul.active {
+        left: 0%;
+    }
+    .welcome {
+        margin-left: 40px;
+    }
+    
+    .welcome h1 {
+        padding-right: 0;
+        font-size: 58px;
+        width: 480px;
+        margin-top: 0;
+    }
+    
+    .welcome h2 {
+        font-size: 19px;
+    }
+    
+    .content img {
+        width: 400px;
+        border-radius: 0 20px 20px 20px;
+        height: 280px;
+    }
+
+    .Join-us {
+        padding-left: 120px;
+    }
+
+    .nav-link ul {
+        padding: 0 250px;
+    }
+
+    .part h1 {
+        padding: 0 200px;
+    }
+
+    .even h1 {
+        padding-top: 20px;
+    }
+}
+
+@media  (max-width: 767px) {
+    header {
+        height: 400px;
+    }
+    .welcome {
+        text-align: center;
+        margin: 0 30px;
+        margin-left: 5px;
+    }
+    .welcome h1 {
+        width: 100%;
+    }
+    .content img {
+        display: none;
+    }
+
+    .part h1 {
+        font-size: 26px;
+        padding: 0 50px;
+    }
+
+    .even h1 {
+        padding-top: 20px;
+    }
+    .start h1 {
+        font-size: 18px;
+    }
+    .start .trial button {
+        margin-left: 130px;
+    }
+    footer {
+        width: 100%;
+    }
+    .nav-link ul {
+        padding: 0 70px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .content img {
+        display: none;
+    }
+
+    .part {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .part h1 {
+        padding: 0 20px;
+        font-size: 20px;
+    }
+
+    .even h1 {
+        padding-top: 20px;
+    }
+
+    .Blog .container p {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav-link ul {
+        padding: 0 50px;
+    }
+
+    .nav-link ul li {
+        font-size: 14px;
+        justify-content: space-between;
+    }
+
+    footer .container h2 {
+        font-size: 14px;
+    }
+
+    .Join-us {
+        padding-left: 30px;
+    }
+
+    .Join-us .container {
+        width: 500px;
+    }
+
+    .form-container a {
+        font-size: 10px;
+    }
+
+    .Join-us button {
+        padding: 8px 20px;
+    }
+}
